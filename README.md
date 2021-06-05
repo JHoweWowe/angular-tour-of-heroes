@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Personal Notes by Justin
+
+### The Hero Editor
+
+Each component has selector which indicates parent of class, HTML template and CSS (or SCSS) for styles
+@Component - decorator function specifies Angular metadata for component
+ngOnInit() - lifecycle hook (initialize component)
+Export component class 
+Two-way binding using ngModel directive
+ngModel directive not available by default - need to import manually
+
+### Display a selection list
+
+COMING SOON

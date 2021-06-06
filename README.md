@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Personal Notes by Justin
 
-### The Hero Editor
+### Chapter 1: The Hero Editor
 
 Each component has selector which indicates parent of class, HTML template and CSS (or SCSS) for styles
 @Component - decorator function specifies Angular metadata for component
@@ -37,6 +37,10 @@ Export component class
 Two-way binding using ngModel directive
 ngModel directive not available by default - need to import manually
 
-### Display a selection list
+### Chapter 2: Display a selection list
 
-COMING SOON
+Main Idea: Create Mock Heroes --> Displaying heroes --> Viewing details
+Create event binding together with event handler
+Structural and attribute directive
+Event binding + Class binding (such as [class.selected]="<condition>")
+Styles + stylesheets identified in @Component metadata scoped to specific component - doesn't affect other components

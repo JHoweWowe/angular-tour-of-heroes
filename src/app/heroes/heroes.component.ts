@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Hero } from '../hero';
-import { Heroes } from '../mock-heroes';
+import { HeroService } from '../hero.service';
+
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -14,17 +17,23 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   }; **/
 
-  heroes = Heroes;
   selectedHero?: Hero; // Conditional (ternary) operator where syntax is 'condition ? exprIfTrue : exprIfFalse'
+  heroes : Hero[] = [];
 
-  constructor() {}
+  constructor(private heroService : HeroService, private messageService : MessageService) {} // Inject dependency in component constructor
 
-  // In TypeScript colon after method type indicates function or variable
   ngOnInit(): void {
+    this.getHeroes();
   }
 
   onSelect(hero : Hero) : void {
     this.selectedHero = hero;
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  }
+
+  getHeroes() : void {
+    this.heroService.getHeroes()
+        .subscribe(heroes => this.heroes = heroes);
   }
 
 

@@ -50,3 +50,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - HeroesComponent displays list of heroes but HeroDetailComponent shows present details of hero
 - `ng generate component hero-detail`
 - @Input decorator in child component class and then use property binding in parent component class
+
+### Chapter 4: Add Services
+- Components generally shouldn't directly fetch or save data
+- **Angular Dependency Injection (DI)** - design pattern where class requires dependenices from external sources than creating them individually
+- Services used to share information from one class to another
+- Create HeroService --> Provide HeroService (created by default)
+- Observable HeroService uses HTTPClient + Subscribe in HeroesComponent
+- Show Messages --> injecting MessageService into HeroService required to see if HeroService fetches heroes successfully
+    - Also known as 'Service-in-service scenario'
